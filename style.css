@@ -346,11 +346,12 @@ nav.show .icon-close {
 }
 
 .card {
-  padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
+  padding: 3.625rem 2rem;
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
+  user-select: none;
 }
 
 .card i {
@@ -571,7 +572,7 @@ footer .social a:hover {
   #about .container {
     grid-auto-flow: column;
     align-items: center;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   #about .container .text {
@@ -582,6 +583,16 @@ footer .social a:hover {
   /**************************** SERVICES ****************************/
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    cursor: pointer;
+    transition: transform .5s;
+  }
+
+  .card:hover {
+    background-color: #fff;
+    transform: translateY(-40px);
   }
 
   /**************************** TESTIMONIALS ****************************/
@@ -604,6 +615,18 @@ footer .social a:hover {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  footer .container .social i.icon-instagram:hover {
+    color: blueviolet;
+  }
+
+  footer .container .social i.icon-facebook:hover {
+    color: blue;
+  }
+
+  footer .container .social i.icon-youtube:hover {
+    color: red;
   }
 }
 /**************************** RESPONSIVE - Desktop ****************************/
@@ -692,6 +715,13 @@ footer .social a:hover {
   .card {
     padding-left: 3rem;
     padding-right: 3rem;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    background-color: #fff;
+    transform: translateY(-40px);
   }
 
   /**************************** TESTIMONIALS ****************************/
@@ -719,5 +749,17 @@ footer .social a:hover {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  footer .container .social i.icon-instagram:hover {
+    color: blueviolet;
+  }
+
+  footer .container .social i.icon-facebook:hover {
+    color: blue;
+  }
+
+  footer .container .social i.icon-youtube:hover {
+    color: red;
   }
 }
