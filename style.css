@@ -196,7 +196,6 @@ nav .menu ul {
   display: none;
 }
 
-
 /* Show menu */
 nav.show .menu {
   display: grid;
@@ -328,7 +327,7 @@ nav.show .icon-close {
   position: absolute;
   top: -8.3%;
   left: -33%;
-  z-index: -1;
+  z-index: 0;
 }
 
 #about .image img,
@@ -515,15 +514,105 @@ footer .social a:hover {
 }
 
 /**************************** RESPONSIVE - Tablets ****************************/
-@media (min-width: 992px) {
+@media (min-width: 899px) {
+  /**************************** VARIABLES ****************************/
   :root {
     --title-font-size: 2.2rem;
     --subtitle-font-size: 1.125rem;
   }
-}
 
+  /**************************** OTHERS ****************************/
+  .section header {
+    max-width: 30rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /**************************** NAVIGATION ****************************/
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /**************************** HOME ****************************/
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /**************************** ABOUT ****************************/
+  #about .container {
+    grid-auto-flow: column;
+    align-items: center;
+    margin: 0 auto
+  }
+
+  #about .container .text {
+    text-align: right;
+    width: 24rem;
+  }
+
+  /**************************** SERVICES ****************************/
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /**************************** TESTIMONIALS ****************************/
+  #testimonials header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /**************************** CONTACT ****************************/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .container .text {
+    max-width: 22rem;
+  }
+
+  /**************************** FOOTER ****************************/
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 /**************************** RESPONSIVE - Desktop ****************************/
 @media (min-width: 1200px) {
+  :root {
+    --title-font-size: 2.2rem;
+    --subtitle-font-size: 1.125rem;
+  }
+
   .container {
     max-width: 1120px;
     margin-right: auto;
@@ -541,7 +630,7 @@ footer .social a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   main {
     margin-top: var(--header-height);
   }
@@ -576,11 +665,11 @@ footer .social a:hover {
   #home .container {
     grid-auto-flow: column;
     justify-content: space-between;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   #home .image {
-    order: 1; 
+    order: 1;
   }
 
   #home .text {
@@ -623,12 +712,12 @@ footer .social a:hover {
 
   /**************************** FOOTER ****************************/
   footer.section {
-    padding: 3.75rem 0; 
+    padding: 3.75rem 0;
   }
 
   footer .container {
     grid-auto-flow: column;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 }
