@@ -45,9 +45,6 @@ const swiper = new Swiper('.swiper-container', {
   }
 })
 
-// ScrollReveal - Exibir o conteúdo enquanto realiza rolagem na página
-
-
 // Arrow up visible or hidden
 const backToTopButton = document.querySelector('.back-to-top')
 
